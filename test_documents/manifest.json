@@ -1,0 +1,76 @@
+{
+  "description": "Test document corpus for Kreuzberg vs MarkItDown benchmark",
+  "created": "2026-04-09",
+  "documents": [
+    {
+      "filename": "Sample_1_JE.pdf",
+      "category": "pdf_scanned",
+      "path": "pdf_scanned/Sample_1_JE.pdf",
+      "difficulty": "hard",
+      "characteristics": ["scanned", "known-failure-case", "no-embedded-fonts", "journal-entry"],
+      "source": "Internal sample — the known-failure scanned PDF (MarkItDown extracted only one image, missed all text content). Original filename: 'Sample #1 - JE.pdf'",
+      "needs_ocr": true,
+      "notes": "This is the primary motivation for this benchmark. MarkItDown bare mode failed to extract text from this document in production."
+    },
+    {
+      "filename": "2026_Audit_Plan_FINAL.pdf",
+      "category": "pdf_native",
+      "path": "pdf_native/2026_Audit_Plan_FINAL.pdf",
+      "difficulty": "easy",
+      "characteristics": ["native-pdf", "structured", "headers", "small"],
+      "source": "Internal sample — audit plan document. Original filename: '2026 Audit Plan_FINAL_Dec 1_2025.pdf'",
+      "needs_ocr": false,
+      "notes": "Small native PDF (85KB) with embedded fonts. Represents a typical structured internal document."
+    },
+    {
+      "filename": "6120_Incentives_2023_Accrual.pdf",
+      "category": "pdf_native",
+      "path": "pdf_native/6120_Incentives_2023_Accrual.pdf",
+      "difficulty": "medium",
+      "characteristics": ["native-pdf", "complex", "multi-page", "financial-data", "tables"],
+      "source": "Internal sample — incentives accrual document. Original filename: '6120+Incentives+2023+Accrual+excess+reversal.pdf'",
+      "needs_ocr": false,
+      "notes": "Larger native PDF (1.1MB, 3 pages) with financial data and likely tables. Represents a moderately complex document."
+    },
+    {
+      "filename": "6120_Incentives_2023_Accrual.xlsx",
+      "category": "xlsx",
+      "path": "xlsx/6120_Incentives_2023_Accrual.xlsx",
+      "difficulty": "medium",
+      "characteristics": ["spreadsheet", "financial-data", "multi-sheet", "formulas"],
+      "source": "Internal sample — incentives accrual Excel workbook. Original filename: '6120+Incentives+2023+Accrual+excess+reversal.xlsx'",
+      "needs_ocr": false,
+      "notes": "Large Excel file (3.1MB). Key test for table/grid extraction fidelity."
+    },
+    {
+      "filename": "sample_report.docx",
+      "category": "docx",
+      "path": "docx/sample_report.docx",
+      "difficulty": "medium",
+      "characteristics": ["word-document", "mixed-content", "formatted-text", "calibre-demo"],
+      "source": "Public sample from calibre-ebook.com (demo.docx). Downloaded 2026-04-09.",
+      "needs_ocr": false,
+      "notes": "1.3MB Word document with mixed formatting. Tests DOCX extraction fidelity."
+    },
+    {
+      "filename": "sample_presentation.pptx",
+      "category": "pptx",
+      "path": "pptx/sample_presentation.pptx",
+      "difficulty": "easy",
+      "characteristics": ["powerpoint", "title-slide", "bullet-points", "table", "benchmark-fixture"],
+      "source": "Created as test fixture using python-pptx. Contains title slide, bullet point slide, and table slide.",
+      "needs_ocr": false,
+      "notes": "Minimal PPTX fixture created programmatically. Tests basic PPTX structure extraction including title, bullets, and table data."
+    },
+    {
+      "filename": "sample_invoice_text.png",
+      "category": "images",
+      "path": "images/sample_invoice_text.png",
+      "difficulty": "easy",
+      "characteristics": ["png-image", "text-content", "invoice-layout", "ocr-required", "benchmark-fixture"],
+      "source": "Created as test fixture using Pillow. Contains structured text mimicking a financial invoice.",
+      "needs_ocr": true,
+      "notes": "PNG image with visible text requiring OCR. Tests image-to-text extraction capability of both tools."
+    }
+  ]
+}
