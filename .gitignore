@@ -1,0 +1,22 @@
+.planning/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# uv
+.python-version
+
+# Environment
+.env
+
+# Output (large generated files)
+output/
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
