@@ -9,10 +9,12 @@ dependencies = [
     "markitdown[all]==0.1.5",
     "markitdown-ocr==0.1.0",
     "openai",
+    "jiwer==4.0.0",
 ]
 
 [dependency-groups]
 dev = [
+    "pytest>=9.0.3",
     "rich",
 ]
 
