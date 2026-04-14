@@ -15,6 +15,11 @@ OUTPUT_DIR = PROJECT_ROOT / "output"
 KREUZBERG_OUTPUT_DIR = OUTPUT_DIR / "kreuzberg"
 MARKITDOWN_BARE_OUTPUT_DIR = OUTPUT_DIR / "markitdown" / "bare"
 MARKITDOWN_OCR_OUTPUT_DIR = OUTPUT_DIR / "markitdown" / "ocr"
+ILIAD_OUTPUT_DIR = OUTPUT_DIR / "iliad"
+
+# Results directory for evaluation output (Phase 2 -> Phase 3 contract)
+RESULTS_DIR = PROJECT_ROOT / "results"
+RESULTS_PATH = RESULTS_DIR / "results.csv"
 
 # Format categories (per D-04)
 FORMAT_CATEGORIES = [
@@ -44,5 +49,11 @@ def get_corpus_files() -> list[dict]:
 
 def ensure_output_dirs() -> None:
     """Create output directories if they don't exist."""
-    for d in [KREUZBERG_OUTPUT_DIR, MARKITDOWN_BARE_OUTPUT_DIR, MARKITDOWN_OCR_OUTPUT_DIR]:
+    for d in [
+        KREUZBERG_OUTPUT_DIR,
+        MARKITDOWN_BARE_OUTPUT_DIR,
+        MARKITDOWN_OCR_OUTPUT_DIR,
+        ILIAD_OUTPUT_DIR,
+        RESULTS_DIR,
+    ]:
         d.mkdir(parents=True, exist_ok=True)
