@@ -113,6 +113,11 @@ def main() -> None:
 
         print(f"\n[{doc['category']}] {filename}")
 
+        # Skip internal files that aren't present on this machine
+        if not doc_path.exists() and not doc.get("committed", True):
+            print(f"  SKIP-INTERNAL: not present on this machine")
+            continue
+
         # --- ILIAD extraction ---
         iliad_out = output_path_for(filename, ILIAD_OUTPUT_DIR)
 

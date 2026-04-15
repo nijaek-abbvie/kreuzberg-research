@@ -39,6 +39,7 @@ class KreuzbergExtractor:
         from kreuzberg import (
             ExtractionConfig,
             KreuzbergError,
+            LayoutDetectionConfig,
             MissingDependencyError,
             OCRError,
             OcrConfig,
@@ -48,6 +49,7 @@ class KreuzbergExtractor:
         config = ExtractionConfig(
             output_format="markdown",
             ocr=OcrConfig(backend="tesseract", language="eng"),
+            layout=LayoutDetectionConfig(apply_heuristics=True),
         )
 
         try:

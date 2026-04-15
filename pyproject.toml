@@ -17,6 +17,8 @@ dependencies = [
 dev = [
     "pytest>=9.0.3",
     "rich",
+    "reportlab>=4.0",
+    "fpdf2>=2.7",
 ]
 
 [build-system]
