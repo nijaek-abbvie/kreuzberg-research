@@ -29,11 +29,25 @@ def test_results_csv_exists():
     assert RESULTS_PATH.exists(), f"results.csv not found at {RESULTS_PATH}"
 
 
-def test_results_csv_has_7_rows():
-    """results.csv must have one row per corpus document (7 documents)."""
+def test_results_csv_has_expected_rows():
+    """results.csv must have one row per corpus document that exists on disk.
+
+    Internal (committed: false) documents may be absent on machines that don't
+    have them, so only committed-or-present documents count toward the expected
+    row total.
+    """
     import pandas as pd
+    import sys
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from benchmark.config import CORPUS_DIR, get_corpus_files
+
+    documents = get_corpus_files()
+    expected = sum(
+        1 for d in documents
+        if d.get("committed", True) or (CORPUS_DIR / d["path"]).exists()
+    )
     df = pd.read_csv(RESULTS_PATH)
-    assert len(df) == 7, f"Expected 7 rows, got {len(df)}"
+    assert len(df) == expected, f"Expected {expected} rows, got {len(df)}"
 
 
 def test_results_csv_has_correct_columns():

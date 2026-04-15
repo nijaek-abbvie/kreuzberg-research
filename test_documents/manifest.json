@@ -5,72 +5,838 @@
     {
       "filename": "Sample_1_JE.pdf",
       "category": "pdf_scanned",
-      "path": "pdf_scanned/Sample_1_JE.pdf",
+      "path": "internal/pdf_scanned/Sample_1_JE.pdf",
       "difficulty": "hard",
-      "characteristics": ["scanned", "known-failure-case", "no-embedded-fonts", "journal-entry"],
-      "source": "Internal sample — the known-failure scanned PDF (MarkItDown extracted only one image, missed all text content). Original filename: 'Sample #1 - JE.pdf'",
+      "characteristics": [
+        "scanned",
+        "known-failure-case",
+        "no-embedded-fonts",
+        "journal-entry"
+      ],
+      "source": "Internal sample \u2014 the known-failure scanned PDF (MarkItDown extracted only one image, missed all text content). Original filename: 'Sample #1 - JE.pdf'",
       "needs_ocr": true,
-      "notes": "This is the primary motivation for this benchmark. MarkItDown bare mode failed to extract text from this document in production."
+      "notes": "This is the primary motivation for this benchmark. MarkItDown bare mode failed to extract text from this document in production.",
+      "committed": false,
+      "generated": false
     },
     {
       "filename": "2026_Audit_Plan_FINAL.pdf",
       "category": "pdf_native",
-      "path": "pdf_native/2026_Audit_Plan_FINAL.pdf",
+      "path": "internal/pdf_native/2026_Audit_Plan_FINAL.pdf",
       "difficulty": "easy",
-      "characteristics": ["native-pdf", "structured", "headers", "small"],
-      "source": "Internal sample — audit plan document. Original filename: '2026 Audit Plan_FINAL_Dec 1_2025.pdf'",
+      "characteristics": [
+        "native-pdf",
+        "structured",
+        "headers",
+        "small"
+      ],
+      "source": "Internal sample \u2014 audit plan document. Original filename: '2026 Audit Plan_FINAL_Dec 1_2025.pdf'",
       "needs_ocr": false,
-      "notes": "Small native PDF (85KB) with embedded fonts. Represents a typical structured internal document."
+      "notes": "Small native PDF (85KB) with embedded fonts. Represents a typical structured internal document.",
+      "committed": false,
+      "generated": false
     },
     {
       "filename": "6120_Incentives_2023_Accrual.pdf",
       "category": "pdf_native",
-      "path": "pdf_native/6120_Incentives_2023_Accrual.pdf",
+      "path": "internal/pdf_native/6120_Incentives_2023_Accrual.pdf",
       "difficulty": "medium",
-      "characteristics": ["native-pdf", "complex", "multi-page", "financial-data", "tables"],
-      "source": "Internal sample — incentives accrual document. Original filename: '6120+Incentives+2023+Accrual+excess+reversal.pdf'",
+      "characteristics": [
+        "native-pdf",
+        "complex",
+        "multi-page",
+        "financial-data",
+        "tables"
+      ],
+      "source": "Internal sample \u2014 incentives accrual document. Original filename: '6120+Incentives+2023+Accrual+excess+reversal.pdf'",
       "needs_ocr": false,
-      "notes": "Larger native PDF (1.1MB, 3 pages) with financial data and likely tables. Represents a moderately complex document."
+      "notes": "Larger native PDF (1.1MB, 3 pages) with financial data and likely tables. Represents a moderately complex document.",
+      "committed": false,
+      "generated": false
     },
     {
       "filename": "6120_Incentives_2023_Accrual.xlsx",
       "category": "xlsx",
-      "path": "xlsx/6120_Incentives_2023_Accrual.xlsx",
+      "path": "internal/xlsx/6120_Incentives_2023_Accrual.xlsx",
       "difficulty": "medium",
-      "characteristics": ["spreadsheet", "financial-data", "multi-sheet", "formulas"],
-      "source": "Internal sample — incentives accrual Excel workbook. Original filename: '6120+Incentives+2023+Accrual+excess+reversal.xlsx'",
+      "characteristics": [
+        "spreadsheet",
+        "financial-data",
+        "multi-sheet",
+        "formulas"
+      ],
+      "source": "Internal sample \u2014 incentives accrual Excel workbook. Original filename: '6120+Incentives+2023+Accrual+excess+reversal.xlsx'",
       "needs_ocr": false,
-      "notes": "Large Excel file (3.1MB). Key test for table/grid extraction fidelity."
+      "notes": "Large Excel file (3.1MB). Key test for table/grid extraction fidelity.",
+      "committed": false,
+      "generated": false
     },
     {
       "filename": "sample_report.docx",
       "category": "docx",
       "path": "docx/sample_report.docx",
       "difficulty": "medium",
-      "characteristics": ["word-document", "mixed-content", "formatted-text", "calibre-demo"],
+      "characteristics": [
+        "word-document",
+        "mixed-content",
+        "formatted-text",
+        "calibre-demo"
+      ],
       "source": "Public sample from calibre-ebook.com (demo.docx). Downloaded 2026-04-09.",
       "needs_ocr": false,
-      "notes": "1.3MB Word document with mixed formatting. Tests DOCX extraction fidelity."
+      "notes": "1.3MB Word document with mixed formatting. Tests DOCX extraction fidelity.",
+      "committed": true,
+      "generated": false
     },
     {
       "filename": "sample_presentation.pptx",
       "category": "pptx",
       "path": "pptx/sample_presentation.pptx",
       "difficulty": "easy",
-      "characteristics": ["powerpoint", "title-slide", "bullet-points", "table", "benchmark-fixture"],
+      "characteristics": [
+        "powerpoint",
+        "title-slide",
+        "bullet-points",
+        "table",
+        "benchmark-fixture"
+      ],
       "source": "Created as test fixture using python-pptx. Contains title slide, bullet point slide, and table slide.",
       "needs_ocr": false,
-      "notes": "Minimal PPTX fixture created programmatically. Tests basic PPTX structure extraction including title, bullets, and table data."
+      "notes": "Minimal PPTX fixture created programmatically. Tests basic PPTX structure extraction including title, bullets, and table data.",
+      "committed": true,
+      "generated": false
     },
     {
       "filename": "sample_invoice_text.png",
       "category": "images",
       "path": "images/sample_invoice_text.png",
       "difficulty": "easy",
-      "characteristics": ["png-image", "text-content", "invoice-layout", "ocr-required", "benchmark-fixture"],
+      "characteristics": [
+        "png-image",
+        "text-content",
+        "invoice-layout",
+        "ocr-required",
+        "benchmark-fixture"
+      ],
       "source": "Created as test fixture using Pillow. Contains structured text mimicking a financial invoice.",
       "needs_ocr": true,
-      "notes": "PNG image with visible text requiring OCR. Tests image-to-text extraction capability of both tools."
+      "notes": "PNG image with visible text requiring OCR. Tests image-to-text extraction capability of both tools.",
+      "committed": true,
+      "generated": false
+    },
+    {
+      "filename": "syn_simple_text.pdf",
+      "category": "pdf_native",
+      "path": "pdf_native/syn_simple_text.pdf",
+      "difficulty": "easy",
+      "characteristics": [
+        "pdf-native",
+        "simple-text",
+        "headings",
+        "paragraphs"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Simple single-page native PDF with headings and body paragraphs.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_multipage_headers.pdf",
+      "category": "pdf_native",
+      "path": "pdf_native/syn_multipage_headers.pdf",
+      "difficulty": "easy",
+      "characteristics": [
+        "pdf-native",
+        "multi-page",
+        "headers-footers",
+        "page-numbers"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Five-page native PDF with running header, footer, and page numbers.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_two_column.pdf",
+      "category": "pdf_native",
+      "path": "pdf_native/syn_two_column.pdf",
+      "difficulty": "medium",
+      "characteristics": [
+        "pdf-native",
+        "two-column",
+        "academic-paper",
+        "multi-frame"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Two-column academic paper layout \u2014 tests column detection and reading order.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_tables_and_image.pdf",
+      "category": "pdf_native",
+      "path": "pdf_native/syn_tables_and_image.pdf",
+      "difficulty": "medium",
+      "characteristics": [
+        "pdf-native",
+        "tables",
+        "embedded-image",
+        "financial-report"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Native PDF with a styled data table and an embedded image/chart.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_form_layout.pdf",
+      "category": "pdf_native",
+      "path": "pdf_native/syn_form_layout.pdf",
+      "difficulty": "medium",
+      "characteristics": [
+        "pdf-native",
+        "form-layout",
+        "expense-form",
+        "field-lines",
+        "tables"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Expense reimbursement form with labeled fields, a data table, and signature blocks.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_large_50pages.pdf",
+      "category": "pdf_native",
+      "path": "pdf_native/syn_large_50pages.pdf",
+      "difficulty": "hard",
+      "characteristics": [
+        "pdf-native",
+        "50-pages",
+        "large-document",
+        "multi-section",
+        "headers-footers"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "50-page native PDF \u2014 stress-tests large document handling.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_clean_scan_300dpi.pdf",
+      "category": "pdf_scanned",
+      "path": "pdf_scanned/syn_clean_scan_300dpi.pdf",
+      "difficulty": "easy",
+      "characteristics": [
+        "pdf-scanned",
+        "image-only",
+        "300dpi",
+        "clean-scan",
+        "meeting-minutes"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Clean 300 DPI image-based PDF \u2014 easy OCR baseline for scanned docs.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_multi_page_scan_200dpi.pdf",
+      "category": "pdf_scanned",
+      "path": "pdf_scanned/syn_multi_page_scan_200dpi.pdf",
+      "difficulty": "medium",
+      "characteristics": [
+        "pdf-scanned",
+        "multi-page",
+        "200dpi",
+        "grant-application"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Three-page scanned PDF at 200 DPI \u2014 tests multi-page OCR and continuity.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_low_dpi_noisy.pdf",
+      "category": "pdf_scanned",
+      "path": "pdf_scanned/syn_low_dpi_noisy.pdf",
+      "difficulty": "hard",
+      "characteristics": [
+        "pdf-scanned",
+        "low-dpi",
+        "120dpi",
+        "noisy",
+        "scan-degradation"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Low-resolution (120 DPI) scanned PDF with added noise \u2014 hard OCR challenge.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_skewed_scan.pdf",
+      "category": "pdf_scanned",
+      "path": "pdf_scanned/syn_skewed_scan.pdf",
+      "difficulty": "hard",
+      "characteristics": [
+        "pdf-scanned",
+        "skewed",
+        "3-degree-rotation",
+        "purchase-order",
+        "table-content"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Scanned PDF with 3-degree skew \u2014 simulates a page fed at an angle.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_degraded_photocopy.pdf",
+      "category": "pdf_scanned",
+      "path": "pdf_scanned/syn_degraded_photocopy.pdf",
+      "difficulty": "hard",
+      "characteristics": [
+        "pdf-scanned",
+        "degraded",
+        "photocopy",
+        "blur",
+        "low-contrast"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Heavily degraded photocopy simulation: noise, blur, and reduced contrast.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_mixed_native_then_scan.pdf",
+      "category": "pdf_mixed",
+      "path": "pdf_mixed/syn_mixed_native_then_scan.pdf",
+      "difficulty": "medium",
+      "characteristics": [
+        "pdf-mixed",
+        "native-then-scanned",
+        "inspection-report",
+        "appendix"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Mixed PDF: 2 native text pages followed by 2 scanned appendix pages.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_mixed_alternating.pdf",
+      "category": "pdf_mixed",
+      "path": "pdf_mixed/syn_mixed_alternating.pdf",
+      "difficulty": "hard",
+      "characteristics": [
+        "pdf-mixed",
+        "alternating-pages",
+        "clinical-trial",
+        "consent-forms"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Hard mixed PDF: alternating native and scanned pages \u2014 tests page-type detection.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_mixed_appendix.pdf",
+      "category": "pdf_mixed",
+      "path": "pdf_mixed/syn_mixed_appendix.pdf",
+      "difficulty": "medium",
+      "characteristics": [
+        "pdf-mixed",
+        "appendix-scanned",
+        "software-spec",
+        "5-native-2-scanned"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Mixed PDF: 5 native pages (software spec) + 2 scanned appendix pages.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_simple_doc.docx",
+      "category": "docx",
+      "path": "docx/syn_simple_doc.docx",
+      "difficulty": "easy",
+      "characteristics": [
+        "docx",
+        "simple",
+        "headings",
+        "paragraphs",
+        "bullet-list"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Simple Word document with headings, paragraphs, and a bullet list.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_tables_merged.docx",
+      "category": "docx",
+      "path": "docx/syn_tables_merged.docx",
+      "difficulty": "medium",
+      "characteristics": [
+        "docx",
+        "table",
+        "merged-cells",
+        "expense-report"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Word document with a table containing merged header cells.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_nested_tables.docx",
+      "category": "docx",
+      "path": "docx/syn_nested_tables.docx",
+      "difficulty": "hard",
+      "characteristics": [
+        "docx",
+        "nested-tables",
+        "table-in-cell",
+        "team-directory"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Word document with a nested table (table embedded inside a table cell).",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_inline_images.docx",
+      "category": "docx",
+      "path": "docx/syn_inline_images.docx",
+      "difficulty": "medium",
+      "characteristics": [
+        "docx",
+        "inline-images",
+        "figures",
+        "mixed-content"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Word document with inline images interspersed between text sections.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_headers_footers.docx",
+      "category": "docx",
+      "path": "docx/syn_headers_footers.docx",
+      "difficulty": "medium",
+      "characteristics": [
+        "docx",
+        "headers",
+        "footers",
+        "page-breaks",
+        "strategic-plan"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Multi-page Word document with header/footer branding and page breaks.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_simple_grid.xlsx",
+      "category": "xlsx",
+      "path": "xlsx/syn_simple_grid.xlsx",
+      "difficulty": "easy",
+      "characteristics": [
+        "xlsx",
+        "single-sheet",
+        "simple-grid",
+        "tabular-data"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Simple 10-row data grid, single sheet, basic header formatting.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_multi_sheet.xlsx",
+      "category": "xlsx",
+      "path": "xlsx/syn_multi_sheet.xlsx",
+      "difficulty": "medium",
+      "characteristics": [
+        "xlsx",
+        "multi-sheet",
+        "formulas",
+        "cross-sheet",
+        "financial-model"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Three-sheet workbook: Summary with formulas, Monthly Detail, and Notes.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_merged_cells.xlsx",
+      "category": "xlsx",
+      "path": "xlsx/syn_merged_cells.xlsx",
+      "difficulty": "medium",
+      "characteristics": [
+        "xlsx",
+        "merged-cells",
+        "department-budget",
+        "section-headers"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Budget spreadsheet with merged title row and merged column-group headers.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_chart_embedded.xlsx",
+      "category": "xlsx",
+      "path": "xlsx/syn_chart_embedded.xlsx",
+      "difficulty": "medium",
+      "characteristics": [
+        "xlsx",
+        "embedded-chart",
+        "bar-chart",
+        "sales-data"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Excel with 12-month sales data and an embedded clustered bar chart.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_wide_100cols.xlsx",
+      "category": "xlsx",
+      "path": "xlsx/syn_wide_100cols.xlsx",
+      "difficulty": "hard",
+      "characteristics": [
+        "xlsx",
+        "wide-format",
+        "100-columns",
+        "500-rows",
+        "time-series",
+        "sensor-data"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Very wide sheet: 100 columns (timestamp + 99 sensor metrics), 500 rows.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_rich_formatting.xlsx",
+      "category": "xlsx",
+      "path": "xlsx/syn_rich_formatting.xlsx",
+      "difficulty": "hard",
+      "characteristics": [
+        "xlsx",
+        "rich-formatting",
+        "conditional-colors",
+        "number-formats",
+        "portfolio"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Portfolio sheet with multiple number formats, color-coded gain/loss, alternating row shading.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_basic_bullets.pptx",
+      "category": "pptx",
+      "path": "pptx/syn_basic_bullets.pptx",
+      "difficulty": "easy",
+      "characteristics": [
+        "pptx",
+        "title-slide",
+        "bullet-points",
+        "financial-review"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Three-slide PPTX: title, agenda, and financial highlights bullets.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_table_slides.pptx",
+      "category": "pptx",
+      "path": "pptx/syn_table_slides.pptx",
+      "difficulty": "medium",
+      "characteristics": [
+        "pptx",
+        "tables",
+        "regional-data",
+        "product-data"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "PPTX with two table slides: regional revenue breakdown and top product table.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_complex_layout.pptx",
+      "category": "pptx",
+      "path": "pptx/syn_complex_layout.pptx",
+      "difficulty": "medium",
+      "characteristics": [
+        "pptx",
+        "multiple-text-boxes",
+        "complex-layout",
+        "strategic-overview"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "PPTX with manually positioned multiple text boxes per slide \u2014 tests non-standard layout extraction.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_speaker_notes.pptx",
+      "category": "pptx",
+      "path": "pptx/syn_speaker_notes.pptx",
+      "difficulty": "medium",
+      "characteristics": [
+        "pptx",
+        "speaker-notes",
+        "ml-overview",
+        "extensive-notes"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Four-slide PPTX with extensive speaker notes on each slide \u2014 tests notes extraction.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_simple_comma.csv",
+      "category": "csv",
+      "path": "csv/syn_simple_comma.csv",
+      "difficulty": "easy",
+      "characteristics": [
+        "csv",
+        "comma-separated",
+        "ascii",
+        "tabular-data"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Simple comma-separated file, 20 rows x 5 columns, ASCII only.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_utf8_bom.csv",
+      "category": "csv",
+      "path": "csv/syn_utf8_bom.csv",
+      "difficulty": "medium",
+      "characteristics": [
+        "csv",
+        "utf8-bom",
+        "international-characters",
+        "unicode"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "UTF-8 BOM encoded CSV with international characters and currency symbols.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_semicolon_delimited.csv",
+      "category": "csv",
+      "path": "csv/syn_semicolon_delimited.csv",
+      "difficulty": "medium",
+      "characteristics": [
+        "csv",
+        "semicolon-delimited",
+        "european-format",
+        "german"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Semicolon-delimited CSV in European format with German content and comma decimal separators.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_tab_delimited.csv",
+      "category": "csv",
+      "path": "csv/syn_tab_delimited.csv",
+      "difficulty": "easy",
+      "characteristics": [
+        "csv",
+        "tab-delimited",
+        "tsv",
+        "genomics-data"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Tab-delimited file (.csv extension) with genomic coordinate data.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_quoted_fields.csv",
+      "category": "csv",
+      "path": "csv/syn_quoted_fields.csv",
+      "difficulty": "medium",
+      "characteristics": [
+        "csv",
+        "quoted-fields",
+        "embedded-commas",
+        "embedded-newlines"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "CSV with quoted fields containing commas, embedded newlines, and escaped quotes.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_wide_100cols.csv",
+      "category": "csv",
+      "path": "csv/syn_wide_100cols.csv",
+      "difficulty": "hard",
+      "characteristics": [
+        "csv",
+        "wide-format",
+        "100-columns",
+        "500-rows",
+        "numeric-data"
+      ],
+      "source": "synthetic",
+      "needs_ocr": false,
+      "notes": "Very wide CSV: 100 columns x 500 rows of numeric metric data.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_clean_text.png",
+      "category": "images",
+      "path": "images/syn_clean_text.png",
+      "difficulty": "easy",
+      "characteristics": [
+        "png",
+        "clean-text",
+        "300dpi",
+        "structured-report",
+        "ocr-required"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Clean 300 DPI image of a structured text report \u2014 easy OCR baseline.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_invoice_layout.png",
+      "category": "images",
+      "path": "images/syn_invoice_layout.png",
+      "difficulty": "medium",
+      "characteristics": [
+        "png",
+        "invoice",
+        "table-layout",
+        "structured",
+        "ocr-required"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Invoice image with header, itemized table, and totals section \u2014 tests table OCR.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_two_column_text.png",
+      "category": "images",
+      "path": "images/syn_two_column_text.png",
+      "difficulty": "medium",
+      "characteristics": [
+        "png",
+        "two-column",
+        "newspaper-layout",
+        "ocr-required"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Two-column newspaper-style layout \u2014 tests column detection in OCR.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_rotated_90deg.png",
+      "category": "images",
+      "path": "images/syn_rotated_90deg.png",
+      "difficulty": "hard",
+      "characteristics": [
+        "png",
+        "rotated-90",
+        "scan-artifact",
+        "ocr-required"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Text rotated 90 degrees \u2014 simulates a page fed sideways into a scanner.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_low_res_100dpi.png",
+      "category": "images",
+      "path": "images/syn_low_res_100dpi.png",
+      "difficulty": "hard",
+      "characteristics": [
+        "png",
+        "low-res",
+        "100dpi",
+        "noisy-scan",
+        "ocr-required"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Low-resolution (100 DPI) scan simulation with noise \u2014 tests OCR on degraded images.",
+      "committed": true,
+      "generated": true
+    },
+    {
+      "filename": "syn_multilingual.png",
+      "category": "images",
+      "path": "images/syn_multilingual.png",
+      "difficulty": "hard",
+      "characteristics": [
+        "png",
+        "multilingual",
+        "unicode",
+        "latin-script",
+        "ocr-required"
+      ],
+      "source": "synthetic",
+      "needs_ocr": true,
+      "notes": "Image with text in English, Spanish, French, German, Portuguese \u2014 tests multilingual OCR.",
+      "committed": true,
+      "generated": true
     }
   ]
 }

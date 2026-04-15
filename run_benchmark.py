@@ -136,8 +136,11 @@ def main() -> None:
         needs_ocr = doc.get("needs_ocr", False)
 
         if not doc_path.exists():
-            print(f"  MISSING: {doc_filename} (path: {doc_path})")
-            stats["fail"] += 1
+            if not doc.get("committed", True):
+                print(f"  SKIP-INTERNAL: {doc_filename} (not present on this machine)")
+            else:
+                print(f"  MISSING: {doc_filename} (path: {doc_path})")
+                stats["fail"] += 1
             continue
 
         print(f"\n[{doc['category']}] {doc_filename}")

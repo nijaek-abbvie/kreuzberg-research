@@ -21,13 +21,15 @@ ILIAD_OUTPUT_DIR = OUTPUT_DIR / "iliad"
 RESULTS_DIR = PROJECT_ROOT / "results"
 RESULTS_PATH = RESULTS_DIR / "results.csv"
 
-# Format categories (per D-04)
+# Format categories (per D-04; csv and pdf_mixed added for corpus expansion)
 FORMAT_CATEGORIES = [
     "pdf_native",
     "pdf_scanned",
+    "pdf_mixed",
     "docx",
     "xlsx",
     "pptx",
+    "csv",
     "images",
 ]
 
