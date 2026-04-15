@@ -141,7 +141,7 @@ def main() -> None:
         kb_struct = count_elements(kb_text)
         il_struct = count_elements(iliad_text)
 
-        print(f"  WER={ocr['wer']:.3f}  CER={ocr['cer']:.3f}  "
+        print(f"  WER={min(ocr['wer'], 1.0):.3f}  CER={min(ocr['cer'], 1.0):.3f}  "
               f"KB_headings={kb_struct['headings']}  IL_headings={il_struct['headings']}  "
               f"KB_tables={kb_struct['tables']}  IL_tables={il_struct['tables']}")
 
