@@ -592,6 +592,7 @@ dependencies = [
     { name = "markitdown", extra = ["all"] },
     { name = "markitdown-ocr" },
     { name = "openai" },
+    { name = "python-dotenv" },
 ]
 
 [package.dev-dependencies]
@@ -607,6 +608,7 @@ requires-dist = [
     { name = "markitdown", extras = ["all"], specifier = "==0.1.5" },
     { name = "markitdown-ocr", specifier = "==0.1.0" },
     { name = "openai" },
+    { name = "python-dotenv", specifier = ">=1.2.2" },
 ]
 
 [package.metadata.requires-dev]

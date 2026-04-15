@@ -17,6 +17,10 @@ import argparse
 import sys
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import pandas as pd
 
 from benchmark.config import (
