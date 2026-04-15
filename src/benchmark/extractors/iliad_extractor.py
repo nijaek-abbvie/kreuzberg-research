@@ -33,6 +33,7 @@ class IliadExtractor:
         Returns:
             ExtractionOutput with markdown content or error details.
         """
+        file_path = Path(file_path)
         api_key = os.environ.get("ILIAD_API_KEY")
         base_url = os.environ.get("ILIAD_BASE_URL", "").rstrip("/")
 
